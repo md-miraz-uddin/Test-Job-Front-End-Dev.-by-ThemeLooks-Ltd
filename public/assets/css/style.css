@@ -1,9 +1,31 @@
-*{
-	font-family: 'Roboto', sans-serif;
+/* Common CSS */
+@font-face {
+    font-family: arimo-regular;
+    src: url(../../assets/font/Arimo-Regular.ttf);
+}
+
+@font-face {
+    font-family: arimo-medium;
+    src: url(../../assets/font/Arimo-Medium.ttf);
+}
+
+@font-face {
+    font-family: droidSerif-regular;
+    src: url(../../assets/font/DroidSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: droidSerif-bold;
+    src: url(../../assets/font/DroidSerif-Bold.ttf);
+}
+
+* {
+    font-family: droidSerif-bold, sans-serif;
 }
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 a:hover {
@@ -77,12 +99,10 @@ input[type="password"]::-ms-reveal {
 }
 
 :root {
-    --text-color: #29303b;
+    --text-color: #222;
     --text-light-color: #2c2c2c;
-    --subtitle-color: #848484;
-    --brand-color: #3c3892;
-    --brand-color2: #3c3892;
-    --brand-color3: #7471b1;
+    --subtitle-color: #aaa;
+    --brand-color: #119ee6;
     --button-color: var(--brand-color);
     --review-color: #0fbfa1;
     --review-gold-color: #ffc107;
@@ -91,4 +111,73 @@ input[type="password"]::-ms-reveal {
 
 .section-title {
     color: var(--button-color);
+}
+
+/* Header */
+.header {
+    background-color: #151414;
+}
+
+.header a {
+    color: var(--subtitle-color);
+}
+
+.header .social_icons a:hover {
+    color: var(--brand-color);
+}
+
+/* Navigation */
+.nav_justify {
+    justify-content: end;
+}
+
+.nav_justify a {
+    font-family: arimo-regular, sans-serif;
+}
+
+.nav_justify .nav-link {
+    color: var(--text-color);
+    transition: all linear .3s;
+}
+
+.nav_justify .nav-link span {
+    position: relative;
+    color: var(--text-color);
+    font-family: arimo-regular, sans-serif;
+    transition: all linear .3s;
+}
+
+.nav_justify .nav-link span::before {
+    position: absolute;
+    content: '';
+    background: var(--brand-color);
+    width: 120%;
+    height: 3px;
+    top: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all linear .3s;
+}
+
+.nav_justify .nav-link:hover{
+    color: var(--brand-color);
+}
+
+.nav_justify .nav-link:hover span{
+    color: var(--brand-color);
+}
+
+.nav_justify .nav-link:hover span::before{
+    opacity: 1;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 64px;
+}
+
+.navbar .dropdown-menu li {
+    line-height: 50px;
 }

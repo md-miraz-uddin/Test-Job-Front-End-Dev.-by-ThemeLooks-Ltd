@@ -3,3 +3,21 @@
         justify-content: end;
     }
 }
+
+@media(max-width: 1599px) {}
+
+@media(max-width: 1399px) {}
+
+@media(max-width: 1199px) {}
+
+@media(max-width: 991px) {
+    .nav_justify{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 767px) {}
+
+@media(max-width: 575px) {
+    
+}
