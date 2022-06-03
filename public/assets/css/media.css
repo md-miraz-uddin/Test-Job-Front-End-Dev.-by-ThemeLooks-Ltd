@@ -1,4 +1,4 @@
-@media (min-width: 992px){
+@media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
         justify-content: end;
     }
@@ -8,16 +8,42 @@
 
 @media(max-width: 1399px) {}
 
-@media(max-width: 1199px) {}
+@media(max-width: 1199px) {
+    .nav-link {
+        padding: .5rem .7rem;
+    }
+}
 
 @media(max-width: 991px) {
-    .nav_justify{
+    .header .social_icons{
+        text-align: center;
+    }
+    
+    .header .social_info{
         justify-content: center;
+    }
+
+    .nav_justify {
+        justify-content: center;
+    }
+
+    .login_btn {
+        bottom: 0px;
+    }
+
+    .form_part::after {
+        opacity: 0;
     }
 }
 
 @media(max-width: 767px) {}
 
 @media(max-width: 575px) {
-    
+    .header {
+        line-height: 26px;
+        font-size: 14px;
+    }
+    .dropdown-menu[data-bs-popper] {
+        left: -86px;
+    }
 }
