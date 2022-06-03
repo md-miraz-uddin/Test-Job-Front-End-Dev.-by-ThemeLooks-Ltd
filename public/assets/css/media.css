@@ -40,8 +40,17 @@
 
 @media(max-width: 575px) {
     .header {
-        line-height: 26px;
+        line-height: 30px;
         font-size: 14px;
+    }
+    .header .info_partition {
+        width: 345px;
+    }
+    .header .info_partition::after {
+        height: 21px;
+        width: 1px;
+        left: 41%;
+        top: 4px;
     }
     .dropdown-menu[data-bs-popper] {
         left: -86px;
