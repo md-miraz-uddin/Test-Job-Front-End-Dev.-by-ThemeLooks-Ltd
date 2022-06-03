@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: arimo-bold;
+    src: url(../../assets/font/Arimo-Bold.ttf);
+}
+
+@font-face {
     font-family: droidSerif-regular;
     src: url(../../assets/font/DroidSerif-Regular.ttf);
 }
@@ -121,32 +126,34 @@ input[type="password"]::-ms-reveal {
 
 .header a {
     color: var(--subtitle-color);
+    font-family: arimo-regular;
+    font-size: 14px;
 }
 
 .header .social_icons a:hover {
     color: var(--brand-color);
 }
 
-.header .social_info{
+.header .social_info {
     justify-content: center;
 }
 
 .header .info_partition {
-	width: 411px;
-	display: flex;
-	justify-content: space-between;
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
     position: relative;
 }
 
 .header .info_partition::after {
-	position: absolute;
-	content: '';
-	height: 35px;
-	width: 1px;
-	background-color: var(--subtitle-color);
-	left: 42%;
-	transform: translateX(-50%);
-	top: 7px;
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 1px;
+    background-color: var(--subtitle-color);
+    left: 42%;
+    transform: translateX(-50%);
+    top: 7px;
 }
 
 /* Navigation */
@@ -183,15 +190,15 @@ input[type="password"]::-ms-reveal {
     transition: all linear .3s;
 }
 
-.nav_justify .nav-link:hover{
+.nav_justify .nav-link:hover {
     color: var(--brand-color);
 }
 
-.nav_justify .nav-link:hover span{
+.nav_justify .nav-link:hover span {
     color: var(--brand-color);
 }
 
-.nav_justify .nav-link:hover span::before{
+.nav_justify .nav-link:hover span::before {
     opacity: 1;
 }
 
@@ -205,28 +212,28 @@ input[type="password"]::-ms-reveal {
     line-height: 50px;
 }
 
-.form_part{
+.form_part {
     padding-left: 80px;
     position: relative;
 }
 
 .form_part::after {
-	position: absolute;
-	content: '';
-	top: 0;
-	left: 45px;
-	height: 33px;
-	width: 1px;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 45px;
+    height: 33px;
+    width: 1px;
     background-color: var(--subtitle-color);
 }
 
 .login_btn {
-	position: absolute;
-	bottom: -40px;
-	left: 15%;
+    position: absolute;
+    bottom: -40px;
+    left: 15%;
 }
 
-.login_btn i{
+.login_btn i {
     background: var(--brand-color);
     color: #fff;
     font-size: 25px;
@@ -236,24 +243,171 @@ input[type="password"]::-ms-reveal {
     border-radius: 50%;
 }
 
-.login_btn button{
+.login_btn button {
     border-radius: 50%;
     outline: 2px solid #151414;
     padding: 2px;
 }
 
 .login_btn button:focus:not(:focus-visible) {
-	outline: 2px solid #151414;
+    outline: 2px solid #151414;
 }
 
 .navbar-light .navbar-toggler {
-	border-color: transparent;
+    border-color: transparent;
 }
 
 .navbar-toggler:focus {
-	box-shadow: none;
+    box-shadow: none;
 }
 
 nav.bg-light {
-	background-color: #fff !important;
+    background-color: #fff !important;
+}
+
+/* Banner */
+.banner {
+    padding: 130px 0;
+    background-color: #f2f2f2;
+}
+
+.banner .title {
+    color: var(--text-color);
+    font-size: 48px;
+    line-height: 72px;
+    padding: 22px 0;
+}
+
+.banner .details {
+    font-family: arimo-medium;
+    color: #555;
+    font-size: 16px;
+    line-height: 30px;
+    padding-right: 72px;
+    padding-bottom: 25px;
+}
+
+.banner .more {
+    color: #fff;
+    font-size: 18px;
+    font-family: droidSerif-regular;
+    padding: 6px 18px;
+}
+
+.banner .more.btn {
+    background-color: var(--brand-color);
+}
+
+.banner img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* Hosting Selector */
+.hosting_selector .item {
+    background: var(--brand-color);
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 50px;
+    height: 160px;
+    transition: all linear .3s;
+}
+
+.hosting_selector .title {
+    color: #fff;
+    font-size: 24px;
+}
+
+.hosting_selector .details {
+    font-family: arimo-medium;
+    color: #555;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.hosting_selector .more {
+    color: #fff;
+    font-size: 14px;
+    font-family: arimo-medium;
+    padding: 0;
+    display: none;
+}
+
+.hosting_selector .item:hover {
+    transform: translateY(-30px);
+    background-color: #fff;
+    padding-top: 40px;
+}
+
+.hosting_selector .item:hover .title {
+    color: var(--text-color);
+}
+
+.hosting_selector .item:hover .details {
+    color: var(--text-color);
+    padding-bottom: 10px;
+}
+
+.hosting_selector .item:hover .more {
+    color: var(--brand-color);
+}
+
+.hosting_selector .item:hover .more {
+    display: block;
+}
+
+.hosting_selector .more.btn {
+    background-color: transparent;
+}
+
+.hosting_selector .item_icon {
+    position: absolute;
+    top: -17%;
+    left: 15%;
+}
+
+.hosting_selector .item_icon i {
+    background: var(--brand-color);
+    color: #fff;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+}
+
+.hosting_selector .item:hover .item_icon i {
+    background: var(--text-color);
+}
+
+.hosting_selector .item_icon button {
+    background: #fff;
+    border-radius: 50%;
+    outline: 2px solid #151414;
+    padding: 2px;
+}
+
+.hosting_selector .item:hover .item_icon button {
+    outline: 2px solid var(--brand-color);
+}
+
+.hosting_selector .item_icon button:focus:not(:focus-visible) {
+    outline: 2px solid #151414;
+}
+
+.hosting_selector .item:hover .item_icon button:focus:not(:focus-visible) {
+    outline: 2px solid var(--brand-color);
+}
+
+.hosting_selector .item_icon .btn.disabled,
+.hosting_selector .item_icon .btn:disabled,
+.hosting_selector .item_icon fieldset:disabled .btn {
+    opacity: 1;
+}
+
+.hosting_selector .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
 }
